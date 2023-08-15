@@ -1,0 +1,444 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+    --clr-primary-900: hsl(243, 87%, 12%);
+    --clr-primary-300: hsl(238, 22%, 44%);
+
+    /* Accent */
+    --clr-accent-700: hsl(224, 93%, 58%);
+    --clr-accent-400: hsl(170, 45%, 43%);
+
+    /* Neutral */
+    --clr-neutral-100: hsl(240, 75%, 98%);
+    --clr-neutral-200: hsl(0, 0%, 75%);
+
+    /* fonts */
+    --ff-raleway: 'Raleway', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fs-base: 1rem;
+}
+
+/* CSS reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+/*  Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+/* 6. Remove built-in form typography styles */
+input, button {
+    font: inherit;
+}
+/* 7. Avoid text overflows */
+p, h1, h2, h3 {
+    overflow-wrap: break-word;
+}
+/* 8. Create a root stacking context */
+#root, #__next {
+    isolation: isolate;
+}
+/* 9. list styling reset */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* General styling */
+
+body {
+    min-height: 100vh;
+    min-width: 375px;
+    font-family: var(--ff-open-sans);
+    font-size: var(--fs-base);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5.5rem;
+    font-family: var(--ff-raleway);
+}
+
+.logo {
+    height: 1.8rem;
+}
+
+nav ul {
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-bold);
+    display: flex;
+    gap: 1.4rem;
+}
+
+nav ul a {
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-bold)
+}
+
+nav ul a:hover {
+    color: hsl(239, 37%, 51%);
+}
+
+header {
+    background-color: #fff;
+    color: var(--clr-primary-900);
+    padding: 2rem;
+}
+
+header .illustration {
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--clr-primary-900);
+    font-family: var(--ff-raleway);
+    font-weight: var(--fw-bold);
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header p {
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-bold);
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+form .input {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    opacity: 0.6;
+    border: 1px solid var(--clr-primary-300);
+    margin-bottom: 0.8rem;
+    background-color: #fff;
+}
+
+.submit {
+    background-color: var(--clr-accent-700);
+    color: #fff;
+    font-family: var(--ff-raleway);
+    font-weight: var(--fw-bold);
+    width: 100%;
+    padding-block: 0.6em;
+    border: 0;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: hsl(224, 80%, 44%);;
+}
+
+.section {
+    background-color: var(--clr-neutral-100);
+    padding: 2rem;
+    background-image: url("images/bg-curve-mobile.svg");
+}
+
+section .illustration-2 {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.section h2 {
+    color: var(--clr-primary-900);
+    font-family: var(--ff-raleway);
+    font-size: 1.2125rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.p-section-1 {
+    margin-bottom: 2rem;
+}
+
+.p-section-1, .p-section-2 {
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+}
+
+.section a {
+    color: var(--clr-accent-400);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    text-align: center;
+    width: max-content;
+    margin: 0 auto;
+    border-bottom: 2px solid hsl(170, 48%, 22%);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-block: 2.5rem;
+    cursor: pointer;
+}
+
+.section a::after {
+    content: "";
+    background-image: url("images/icon-arrow.svg");
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.4375rem;
+}
+
+.section a:hover {
+    color: hsl(170, 83%, 23%);
+}
+
+.card {
+    background-color: #fff;
+    color: var(--clr-primary-300);
+    font-weight: bold;
+    font-size: 14px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
+}
+
+.card .quote-icon {
+    height: 1.2rem;
+    width: 1rem;
+}
+
+.card > :nth-child(1),
+.card > :nth-child(2),
+.card > :nth-child(3) {
+    margin-bottom: 0.7rem;
+}
+
+.card .avatar {
+    border-radius: 50%;
+    width: 2.5rem;
+}
+
+.user {
+    font-size: 0.75rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.user .name {
+    font-size: 0.875rem;
+    font-weight: 900;
+}
+
+.ready {
+    padding: 4rem 2rem;
+    background-color: var(--clr-primary-300);
+    color: #fff;
+} 
+
+.ready h3 {
+    color: var(--clr-neutral-100);
+    font-family: var(--ff-raleway);
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.ready p {
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    text-wrap: balance;
+    margin-bottom: 1.2rem;
+}
+
+.ready form .input {
+    background-color: white;
+    font-size: 0.875rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.ready form .submit {
+    font-size: 0.875rem;
+    font-weight: 500;
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+    margin: 0.5rem auto 0;
+}
+
+footer {
+    background-color: var(--clr-primary-900);
+    color: var(--clr-neutral-200);
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.logo-footer {
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.phone {
+    margin-bottom: 1rem;
+}
+
+.mail {
+    margin-bottom: 4rem;
+}
+
+.footer-menu {
+    margin-bottom: 3.5rem;
+}
+
+.footer-menu > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.social-medias a {
+    width: 1.8rem;
+}
+.social-medias {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-neutral-200);
+}
+
+@media only screen and (min-width: 900px) {
+    .flex {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: center;
+        gap: 3rem;
+    }
+    .illustration, .header-content {
+        width: 50%;
+    }
+ 
+    .header-content {
+        align-self: center;
+    }
+
+    header h1, header p {
+        text-align: left;
+    }
+    header p {
+        width: 100%;
+    }
+    form {
+        display: flex;
+        gap: 1rem;
+    }
+    header form .input {
+        margin-bottom: 0;
+    }
+
+    .section .flex {
+        text-align: left;
+        align-items: center;
+    }
+
+    .section :is(h2, .p-section-1, .p-section-2) {
+        text-align: left;
+    }
+
+    .section h2 {
+     font-size: 2rem;
+     width: 100%;
+    }
+
+    .section-coontent p {
+        width: 80%;
+    }
+
+    .section a {
+        margin: 0;
+        text-align: left;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+ 
+    .card {
+        margin: 0;
+        margin-bottom: 2rem;
+        min-width: 50%;
+    }
+
+    .ready .flex {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .ready-content, .ready form {
+        width: 50%;
+    }
+    .ready h3, .ready p {
+        text-align: left;
+    }
+
+    .ready form .submit {
+        margin: 0;
+        width: 40%;
+    }
+
+    .ready form .input {
+        width: 100%;
+    }
+
+    .ready form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: minmax(max-content, 2fr) 1fr 1fr 2fr;
+        gap: 2rem;
+        align-items: baseline;
+    }
+
+    .social-medias {
+        justify-self: start;
+    }
+
+    .footer-menu {
+        margin-bottom: 0;
+    }
+
+    header, .section, .ready, footer {
+        padding: 2rem 6rem 2rem 6rem;
+    }
+
+}
+
+/* Some css utilities classes */ 
