@@ -421,13 +421,13 @@ a {
 
     footer {
         display: grid;
-        grid-template-columns: minmax(max-content, 2fr) 1fr 1fr 2fr;
+        grid-template-columns: minmax(max-content, 2fr) 1fr 1fr 1fr;
         gap: 2rem;
         align-items: baseline;
     }
 
     .social-medias {
-        justify-self: start;
+        justify-self: center;
     }
 
     .footer-menu {
@@ -435,7 +435,7 @@ a {
     }
 
     header, .section, .ready, footer {
-        padding: 2rem 6rem 2rem 6rem;
+        padding: 4rem 6rem 4rem 6rem;
     }
 
 }
