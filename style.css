@@ -156,7 +156,6 @@ form .input {
 .section {
     background-color: var(--clr-neutral-100);
     padding: 2rem;
-    background-image: url("images/bg-curve-mobile.svg");
 }
 
 section .illustration-2 {
@@ -440,5 +439,3 @@ a {
     }
 
 }
-
-/* Some css utilities classes */ 
